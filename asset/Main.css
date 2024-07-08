@@ -1,40 +1,20 @@
 /*폴더 + 메모지로 꾸미는 느낌의 디자인 활용할 예정*/
-@font-face { /* 탭 제목용 글꼴 */
-    font-family: 'ONE-Mobile-POP';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face{ /* 탭 제목용 글꼴 */
+    font-family:'DNFBitBitv2';
+    font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
 
-@font-face{
+@font-face{ /* 본문 글씨용 글꼴 */
     font-family:'bitbit';
     src:url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2') ;
 }
-
-@font-face { /* 본문 글씨용 글꼴 */
-    font-family: 'Ownglyph_meetme-Rg';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face{
-    font-family:'DNFBitBitv2';
-    font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
 
 * {
     box-sizing: border-box;
 }
 
-:root {
-    --background: #d3a2ec;
-}
-
 body {
-    padding: 0rem 3rem;
+    padding: 0rem 4rem;
     font: 1.2rem "DNFBitBitv2";
-    display: grid;
-    grid: 2rem auto/repeat(1, 100%); /*2차원 레이아웃, 행 - 열 관련*/
     justify-content: center;
     width: 100%;
     background-color:honeydew
@@ -49,7 +29,7 @@ p {
 }
 
 .tab {
-    font: 0.8rem "DNFBitBitv2";
+    font: 1.2rem "DNFBitBitv2";
     line-height: 0.8;
     display: inline-block;
     margin-left: -35px;
@@ -59,7 +39,6 @@ p {
     border-top: 2px solid;
     border-radius: 6px 6px 0 0;
     position: relative;
-    margin-right: 4rem;
     background: var(--background);
     white-space: nowrap;
     cursor: pointer;
@@ -104,7 +83,7 @@ p {
     background: var(--background);
     border-radius: 8px 8px 0 0;
     width: 30px;
-    top: -2px;
+    top: -1px;
     border-top: 2px solid;
 }
 
@@ -157,7 +136,7 @@ p {
 }
 
 .content #tab-1 {
-    display: block;
+    display: none;
 }
 
 .content:before {
@@ -177,13 +156,14 @@ p {
     border-radius: inherit;
     background: var(--background);
     font-family: "bitbit", sans-serif;
+    font-size: 1.3rem;
     box-shadow: 0 0 0 1.5px black;
     z-index: 5;
 }
 
 .folder {
     margin: 1rem auto;
-    max-width: 50rem;
+    max-width: 60rem;
     width: 100%;
     scrollbar-height: none;
     /* Firefox */
@@ -198,7 +178,7 @@ p {
 }
 
 .page {
-    padding: 1.5rem;
+    padding: 0.5rem 1rem;
     border: 2px solid;
     border-radius: 2px;
     min-height: 20rem;

@@ -1,18 +1,29 @@
 function openTab(evt, tab) {
-	var i, tabcontent, tablinks;
-	tabcontent = document.getElementsByClassName("content__inner");
-	for (i = 0; i < tabcontent.length; i++) {
-		tabcontent[i].style.display = "none";
+	var i, tabcontent, tablinks, currentTab, isCurrentActive;
+	
+	tabcontent = document.getElementsByClassName("content__inner"); // 인덱스 내부 본문에 해당하는 클래스 이름
+	tablinks = document.getElementsByClassName("tab"); // 인덱스에 해당하는 클래스 이름
+	currentTab = document.getElementById(tab); // 인덱스 내부 본문에 해당하는 아이디
+    isCurrentActive = evt.currentTarget.classList.contains("active"); // 클릭된 탭에 active가 있었는가 확인
+	
+	for (i = 0; i < tabcontent.length; i++) { // 탭 내용 숨김
+		tabcontent[i].style.display = "none"; 
 	}
-	tablinks = document.getElementsByClassName("tab");
-	for (i = 0; i < tablinks.length; i++) {
+
+	for (i = 0; i < tablinks.length; i++) { //active 제거
 		tablinks[i].className = tablinks[i].className.replace(" active", "");
 	}
-	document.getElementById(tab).style.display = "block";
-	evt.currentTarget.className += " active";
+	
+	if (isCurrentActive) { // 이미 활성화된 경우 -> 본문 내용 안보이게 하기
+		currentTab.style.display = "none";
+	} else {
+		currentTab.style.display = "block"; // 본문 내용 보임
+		evt.currentTarget.className += " active"; // active 클래스 추가
+	}
+
 }
 
-//Horizontal scroll for the tabs on mousewheel. If tabs are longer than the content section, there's a scroll bar but it's hidden to retain the design.
+// 가로 너비 800px 넘으면, 스크롤 기능 구현
 if (window.innerWidth > 800) {
 	const scrollContainer = document.querySelector(".tabs");
 

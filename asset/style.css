@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.board_wrap{ /*목록 전체 너비, 여백 설정*/
+    width: 1000px;
+    margin: 100px auto;
+}
+
+.board_title{
+    margin-bottom: 30px;
+}
+
+.board_title strong{
+    font-size: 2rem;
+}
+
+.board_title p{
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+.bt_wrap{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.bt_wrap a{
+    display: inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font-size: 1.4rem;
+}
+
+.bt_wrap a:first-child{
+    margin-left: 0; /*첫번째 a태그는 여백 제거*/
+}
+
+.bt_wrap a.on{ /*강조*/
+    background: #000;
+    color: #fff;
+}
+
+.board_list{
+    width: 100%;
+    border-top: 2px solid #000;
+}
+
+.board_list > div{
+    border-bottom: 1px solid #ddd;
+}
+
+.board_list > div.top{
+    border-bottom: 1px solid #999;
+}
+
+.board_list > div:last-child{
+    border-bottom: 1px solid #000;
+}
+
+.board_list > div > div{
+    display: inline-block;
+
+}
+
+.board_list .num{
+    width: 10%;
+}
+
+.board_list .title{
+    width: 60%;
+}
+
+.board_list .writer{
+    width: 10%;
+}
+
+.board_list .date{
+    width: 10%;
+}
+
+.board_list .count{
+    width: 10%;
+}
