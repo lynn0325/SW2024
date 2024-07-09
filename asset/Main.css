@@ -1,4 +1,7 @@
 /*폴더 + 메모지로 꾸미는 느낌의 디자인 활용할 예정*/
+/*다른 코드 불러오기*/
+@import url(list.css);
+
 @font-face{ /* 탭 제목용 글꼴 */
     font-family:'DNFBitBitv2';
     font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')}
@@ -26,6 +29,17 @@ p {
 
 .logo{
     text-align: center;
+}
+
+.left{
+    width: 80%;
+}
+.right{
+    width: 20%;
+    text-align: center;
+    margin-left: 20px;
+    font-size: 1.5rem;
+    overflow-y: scroll;
 }
 
 .tab {
@@ -165,10 +179,6 @@ p {
     margin: 1rem auto;
     max-width: 60rem;
     width: 100%;
-    scrollbar-height: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE 10+ */
 }
 
 .folder ::-webkit-scrollbar {
@@ -181,7 +191,7 @@ p {
     padding: 0.5rem 1rem;
     border: 2px solid;
     border-radius: 2px;
-    min-height: 20rem;
+    max-height: 40rem;
     line-height: 160%;
     background-color: #f9f9f9;
     display: flex;

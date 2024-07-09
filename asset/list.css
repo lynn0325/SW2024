@@ -1,1 +1,122 @@
-@import url(style.css); /*스타일시트 코드 불러오기*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, li {
+    list-style: none;
+}
+
+#tab-4 > .page {
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    height: 10%;
+    display: block;
+    margin: 0 auto;
+}
+
+.bottom{
+    height: 90%;
+}
+
+/*검색 관련*/
+.search-box{
+    height: 40px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 10px;
+    border: 2px solid #55BEB6;
+}
+
+.search-txt{
+    border: none;
+    background-color: none;
+    outline: none;
+    float: left;
+    font-size: 15px;
+    width: 250px;
+}
+
+.search-btn{
+    float: right;
+    width: 20px;
+    height: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*게시판 관련*/
+#idx_board_wrap {
+    background: #f9f9f9;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+#idx_board_wrap > div {
+    font-size: 0;
+    margin-left: 20px;
+}
+
+.idx_board {
+    display: inline-block;
+    width: 46%;
+    background: #fff;
+}
+
+.idx_board .title {
+    position: relative;
+    padding: 20px;
+    border-bottom: 1px solid #aaa;
+}
+
+.idx_board .title a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.idx_board .title .name {
+    font-size: 30px;
+}
+
+.idx_board .title .more {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.idx_board .title .more img {
+    width: 20px;
+    margin-left: 3px;
+}
+
+.idx_board .list ul li {
+    margin-top: 10px;
+    font-size: 0;
+}
+.idx_board .list ul li:first-child {
+    margin-top: 0;
+}
+
+.idx_board .list a,
+.idx_board .list span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.idx_board .list a {
+    width: 60%;
+    font-size: 20px;
+}
+
+.idx_board .list span {
+    width: 40%;
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+}
