@@ -1,6 +1,5 @@
 /*폴더 + 메모지로 꾸미는 느낌의 디자인 활용할 예정*/
 /*다른 코드 불러오기*/
-@import url(list.css);
 @import url(tab.css);
 @import url(signin.css);
 
@@ -17,12 +16,21 @@
     box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
     margin: 0;
     font: 1.2rem "DNFBitBitv2";
     justify-content: center;
     width: 100%;
-    background-color:honeydew;
+    background-color:rgb(251, 249, 255);
+}
+
+header{
+  padding: 0rem 4rem;
 }
 
 main{
@@ -36,30 +44,29 @@ footer{
 
 .logo{
     text-align: center;
+    padding-bottom: 10px;
 }
 
 #signin{
-    position: fixed;
-    float:right;
-    top:0.3rem;
-    right:0.3rem;
-    font: size 0.5rem;
+  text-align: right;
+  padding: 5px 0px;
+  font: size 0.5rem;
 }
 
 /*이미지 슬라이드*/
-.main{
-    margin: -2px auto;
-    max-width: 60rem;
-    width: 100%;
-    display: block;
-    
-    padding: 1rem;
-    min-height: 15em;
-    max-height: 50em;
+.content{
+  margin: 0px auto;
+  max-width: 60rem;
+  width: 100%;
+  display: block;
+  
+  padding: 1rem;
+  min-height: 15em;
+  max-height: 50em;
 
-    border: 3px solid;
-    border-radius: 5px;
-    background-color: #fff;
+  border: 3px solid;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 .slider {
@@ -85,19 +92,19 @@ footer{
   }
   
   .slide:nth-child(1) {
-    background-image: url(../asset/성신여대\ 풍경/봄.jpg);
+    background-image: url(../asset/이미지/성신여대/봄.jpg);
     animation-delay: 0;
   }
   .slide:nth-child(2) {
-    background-image: url(../asset/성신여대\ 풍경/여름.jpg);
+    background-image: url(../asset/이미지/성신여대/여름.jpg);
     animation-delay: -3s;
   }
   .slide:nth-child(3) {
-    background-image: url(../asset/성신여대\ 풍경/가을.jpg);
+    background-image: url(../asset/이미지/성신여대/가을.jpg);
     animation-delay: -6s;
   }
   .slide:nth-child(4) {
-    background-image: url(../asset/성신여대\ 풍경/겨울.jpg);
+    background-image: url(../asset/이미지/성신여대/겨울.jpg);
     animation-delay: -9s;
   }
   

@@ -1,0 +1,4 @@
+.tab:nth-of-type(3), .content__inner{
+    --background: rgba(167, 188, 255, 1);
+    border-radius: 5px;
+}
